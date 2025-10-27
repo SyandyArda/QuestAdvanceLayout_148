@@ -21,6 +21,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.width
 
@@ -29,50 +30,45 @@ private fun Modifier.Companion.width(nama: Int): Modifier {
 
     @Composable
     fun ActivitasPertama(modifier: Modifier){
-        Column(
-            modifier = Modifier
-                .padding(top=100.dp)
-                .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
+        @@ -34,12 +34,12 @@
+        .padding(top=100.dp)
+            .fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
         ){
             Text(
                 stringResource(R.string.prodi),
                 fontSize =  35.sp,
                 fontWeight = FontWeight.Bold
             )
+            ) {
+            Text(
+                stringResource(R.string.prodi),
+                fontSize = 35.sp,
+                fontWeight = FontWeight.Bold
+            )
             Text(
                 stringResource(R.string.univ),
                 fontSize = 22.sp
-            )
-            Spacer(modifier = Modifier.height(25.dp))
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth(1f)
-                    .padding(12.dp),
-                colors = CardDefaults.cardColors(
-                    contentColor = Color.DarkGray
-                )
-            ) {
-                Row() {
-                    val gambar = painterResource(R.drawable.umy)
-                    Image(
-                        painter = gambar,
-                        contentDescription = null,
-                        modifier = Modifier
-                            .size(100.dp)
-                            .padding(5.dp)
-
+                @@ -65,12 +65,21 @@
+                Spacer(modifier = Modifier.width(30.dp))
+                        Column() {
+                    Text(
+                        stringResource(R.string.nama)
+                                stringResource(R.string.nama),
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
                     )
-                    Spacer(modifier = Modifier.width(30.dp))
-                    Column() {
-                        Text(
-                            stringResource(R.string.nama)
-                        )
-                    }
 
 
-                    )
+
                 }
-            }
+
+
+        }
         }
 
+
+    }
+}
