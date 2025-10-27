@@ -55,7 +55,7 @@ fun ActivitasPertama(modifier: Modifier){
             )
         ) {
             Row() {
-                val gambar = painterResource(R.drawable.sparta)
+                val gambar = painterResource(R.drawable.kucing)
                 Image(
                     painter = gambar,
                     contentDescription = null,
@@ -134,7 +134,7 @@ fun ActivitasPertama(modifier: Modifier){
             )
         ){
             Row() {
-                val gambar = painterResource(R.drawable.bahlil)
+                val gambar = painterResource(R.drawable.rinz)
                 Image(
                     painter = gambar,
                     contentDescription = null,
@@ -143,13 +143,24 @@ fun ActivitasPertama(modifier: Modifier){
                         .padding(5.dp)
                 )
                 Spacer(modifier = Modifier.width(30.dp))
-
                 Column() {
                     Text(
                         stringResource(R.string.nama3),
                         fontSize = 25.sp,
                         fontFamily = FontFamily.Cursive,
                         color = Color.White,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                    Text(
+                        stringResource(R.string.nim2),
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                    Text(
+                        stringResource(R.string.alamat3),
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
                         modifier = Modifier.padding(top = 10.dp)
                     )
                 }
@@ -166,6 +177,18 @@ fun ActivitasPertama(modifier: Modifier){
                     .align(Alignment.BottomCenter)
                     .padding(bottom = 20.dp)
 
+            )
+            Text(
+                stringResource(R.string.nim2),
+                fontSize = 20.sp,
+                color = Color.Yellow,
+                modifier = Modifier.padding(top = 10.dp)
+            )
+            Text(
+                stringResource(R.string.alamat3),
+                fontSize = 20.sp,
+                color = Color.Yellow,
+                modifier = Modifier.padding(top = 10.dp)
             )
         }
     }

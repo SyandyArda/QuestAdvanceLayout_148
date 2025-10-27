@@ -20,17 +20,15 @@ class MainActivity : ComponentActivity() {
         setContent {
             Praktikum3Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        ActivitasPertama(
-                            modifier = Modifier.padding(innerPadding)
-                        )
+
+                    ActivitasPertama(
+                        modifier = Modifier.padding(innerPadding)
+                    )
                 }
             }
         }
     }
 }
-
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
@@ -45,3 +43,4 @@ fun GreetingPreview() {
     Praktikum3Theme {
         Greeting("Android")
     }
+}
