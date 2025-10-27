@@ -55,7 +55,7 @@ fun ActivitasPertama(modifier: Modifier){
             )
         ) {
             Row() {
-                val gambar = painterResource(R.drawable.kucing)
+                val gambar = painterResource(R.drawable.sparta)
                 Image(
                     painter = gambar,
                     contentDescription = null,
@@ -81,7 +81,7 @@ fun ActivitasPertama(modifier: Modifier){
                 }
             }
         }
-        Spacer(modifier = Modifier.height(5.dp))
+        Spacer(modifier = Modifier.height(0.dp))
         Card(
             modifier = Modifier
                 .fillMaxWidth(1f)
@@ -90,29 +90,72 @@ fun ActivitasPertama(modifier: Modifier){
                 containerColor = Color.Blue
             )
 
-        ) {  }
         ) {
-        Row() {
-            val gambar = painterResource(R.drawable.rinz)
-            Image(
-                painter = gambar,
-                contentDescription = null,
-                modifier = Modifier
-                    .size(100.dp)
-                    .padding(5.dp)
-            )
-            Spacer(modifier = Modifier.height(5.dp))
-            Column() {
-                Text(
-                    stringResource(R.string.nama2),
-                    fontSize = 25.sp,
-                    fontFamily = FontFamily.Cursive,
-                    color = Color.White,
-                    modifier = Modifier.padding(top = 15.dp)
+            Row() {
+                val gambar = painterResource(R.drawable.syahroni)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(5.dp)
                 )
+                Spacer(modifier = Modifier.width(30.dp))
+                Column() {
+                    Text(
+                        stringResource(R.string.nama2),
+                        fontSize = 25.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                    Text(
+                        stringResource(R.string.nim),
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                    Text(
+                        stringResource(R.string.alamat2),
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                }
             }
         }
-    }
+        Spacer(modifier = Modifier.height(5.dp))
+        Card(
+            modifier = Modifier
+                .fillMaxWidth(1f)
+                .padding(12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.Red
+            )
+        ){
+            Row() {
+                val gambar = painterResource(R.drawable.bahlil)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(5.dp)
+                )
+                Spacer(modifier = Modifier.width(30.dp))
+
+                Column() {
+                    Text(
+                        stringResource(R.string.nama3),
+                        fontSize = 25.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                }
+            }
+
+        }
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -122,6 +165,7 @@ fun ActivitasPertama(modifier: Modifier){
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
                     .padding(bottom = 20.dp)
+
             )
         }
     }
