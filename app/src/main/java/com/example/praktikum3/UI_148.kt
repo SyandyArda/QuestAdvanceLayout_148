@@ -56,6 +56,7 @@ fun ActivitasPertama(modifier: Modifier){
         ) {
             Row() {
                 val gambar = painterResource(R.drawable.umy)
+                val gambar = painterResource(R.drawable.kucing)
                 Image(
                     painter = gambar,
                     contentDescription = null,
@@ -69,13 +70,13 @@ fun ActivitasPertama(modifier: Modifier){
                         stringResource(R.string.nama),
                         fontSize = 30.sp,
                         fontFamily = FontFamily.Cursive,
-                        color = Color.White,
+                        color = Color.Yellow,
                         modifier = Modifier.padding(top = 15.dp)
                     )
                     Text(
                         stringResource(R.string.alamat),
                         fontSize = 20.sp,
-                        color = Color.Yellow,
+                        color = Color.Black,
                         modifier = Modifier.padding(top = 10.dp)
                     )
                 }
@@ -86,10 +87,10 @@ fun ActivitasPertama(modifier: Modifier){
                 .fillMaxSize()
         ){
             Text(
-                stringResource(R.string.Copy)
-                        stringResource(R.string.Copy),
+                stringResource(R.string.Copy),
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
+                    .padding(bottom = 50.dp)
             )
         }
     }
