@@ -55,7 +55,7 @@ fun ActivitasPertama(modifier: Modifier){
             )
         ) {
             Row() {
-                val gambar = painterResource(R.drawable.sparta)
+                val gambar = painterResource(R.drawable.kucing)
                 Image(
                     painter = gambar,
                     contentDescription = null,
@@ -93,7 +93,14 @@ fun ActivitasPertama(modifier: Modifier){
         ) {  }
         ) {
         Row() {
-            val gambar = painterResource(R.drawable.syahroni)
+            val gambar = painterResource(R.drawable.rinz)
+            Image(
+                painter = gambar,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(100.dp)
+                    .padding(5.dp)
+            )
         }
     }
         Box(
