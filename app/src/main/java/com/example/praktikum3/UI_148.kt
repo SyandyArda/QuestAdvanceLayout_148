@@ -26,49 +26,53 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.width
 
 
-private fun Modifier.Companion.width(nama: Int): Modifier {
 
-    @Composable
-    fun ActivitasPertama(modifier: Modifier){
-        @@ -34,12 +34,12 @@
-        .padding(top=100.dp)
+@Composable
+fun ActivitasPertama(modifier: Modifier){
+    Column(
+        modifier = Modifier
+            .padding(top=100.dp)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        ){
-            Text(
-                stringResource(R.string.prodi),
-                fontSize =  35.sp,
-                fontWeight = FontWeight.Bold
+    ) {
+        Text(
+            stringResource(R.string.prodi),
+            fontSize = 35.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            stringResource(R.string.univ),
+            fontSize = 22.sp
+        )
+        Spacer(modifier = Modifier.height(25.dp))
+        Card(
+            modifier = Modifier
+                .fillMaxWidth(1f)
+                .padding(12.dp),
+            colors = CardDefaults.cardColors(
+                contentColor = Color.DarkGray
             )
-            ) {
-            Text(
-                stringResource(R.string.prodi),
-                fontSize = 35.sp,
-                fontWeight = FontWeight.Bold
-            )
-            Text(
-                stringResource(R.string.univ),
-                fontSize = 22.sp
-                @@ -65,12 +65,21 @@
+        ) {
+            Row() {
+                val gambar = painterResource(R.drawable.umy)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(5.dp)
+                )
                 Spacer(modifier = Modifier.width(30.dp))
-                        Column() {
+                Column() {
                     Text(
-                        stringResource(R.string.nama)
-                                stringResource(R.string.nama),
+                        stringResource(R.string.nama),
                         fontSize = 30.sp,
                         fontFamily = FontFamily.Cursive,
                         color = Color.White,
                         modifier = Modifier.padding(top = 15.dp)
                     )
+                    Text(
+                        stringResource(R.string.alamat),
+                        fontSize = 20.sp,
+                    )
 
-
-
-                }
-
-
-        }
-        }
-
-
-    }
-}
