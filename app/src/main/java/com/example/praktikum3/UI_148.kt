@@ -1,5 +1,6 @@
 package com.example.praktikum3
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -14,6 +15,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.ui.graphics.Color
@@ -42,14 +44,23 @@ fun ActivitasPertama(modifier: Modifier){
         Card(
             modifier = Modifier
                 .fillMaxWidth(1f)
-            @@ -46,7 +47,10 @@
-            contentColor = Color.DarkGray
-        )
+                .padding(12.dp),
+            colors = CardDefaults.cardColors(
+                contentColor = Color.DarkGray
+            )
         ) {
-        Row() {  }
-        Row() {
-            val gambar = painterResource(R.drawable.umy)
+            Row() {
+                val gambar = painterResource(R.drawable.umy)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(5.dp)
 
+                )
+
+                )
+            }
         }
-    }
     }
