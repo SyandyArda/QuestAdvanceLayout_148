@@ -16,51 +16,63 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.width
 
 
-@Composable
-fun ActivitasPertama(modifier: Modifier){
-    Column(
-        modifier = Modifier
-            .padding(top=100.dp)
-            .fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ){
-        Text(
-            stringResource(R.string.prodi),
-            fontSize =  35.sp,
-            fontWeight = FontWeight.Bold
-        )
-        Text(
-            stringResource(R.string.univ),
-            fontSize = 22.sp
-        )
-        Spacer(modifier = Modifier.height(25.dp))
-        Card(
+private fun Modifier.Companion.width(nama: Int): Modifier {
+
+    @Composable
+    fun ActivitasPertama(modifier: Modifier){
+        Column(
             modifier = Modifier
-                .fillMaxWidth(1f)
-                .padding(12.dp),
-            colors = CardDefaults.cardColors(
-                contentColor = Color.DarkGray
+                .padding(top=100.dp)
+                .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ){
+            Text(
+                stringResource(R.string.prodi),
+                fontSize =  35.sp,
+                fontWeight = FontWeight.Bold
             )
-        ) {
-            Row() {
-                val gambar = painterResource(R.drawable.umy)
-                Image(
-                    painter = gambar,
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(100.dp)
-                        .padding(5.dp)
-
+            Text(
+                stringResource(R.string.univ),
+                fontSize = 22.sp
+            )
+            Spacer(modifier = Modifier.height(25.dp))
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth(1f)
+                    .padding(12.dp),
+                colors = CardDefaults.cardColors(
+                    contentColor = Color.DarkGray
                 )
+            ) {
+                Row() {
+                    val gambar = painterResource(R.drawable.umy)
+                    Image(
+                        painter = gambar,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(100.dp)
+                            .padding(5.dp)
 
-                )
+                    )
+                    Spacer(modifier = Modifier.width(30.dp))
+                    Column() {
+                        Text(
+                            stringResource(R.string.nama)
+                        )
+                    }
+
+
+                    )
+                }
             }
         }
-    }
+
